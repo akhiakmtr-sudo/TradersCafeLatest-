@@ -152,7 +152,7 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 4: TRADING WORKSHOPS - Updated Background */}
+      {/* SECTION 4: TRADING WORKSHOPS */}
       <section 
         className="relative w-full h-[760px] flex items-center justify-center overflow-hidden"
         style={{ 
@@ -162,7 +162,6 @@ const ServicesPage: React.FC = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {/* Card remains lowered as previously requested */}
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center transform translate-y-16 md:translate-y-24">
           <div className="bg-gradient-to-r from-black via-black/95 to-amber-600 rounded-[3.5rem] p-10 md:p-16 border border-white/10 shadow-[0_0_100px_rgba(0,0,0,0.8)] flex flex-col items-center text-center">
             <h3 className="text-2xl md:text-4xl font-bold text-white mb-6 uppercase tracking-[0.2em]">
@@ -171,6 +170,54 @@ const ServicesPage: React.FC = () => {
             <p className="text-white text-base md:text-lg leading-relaxed max-w-xl font-medium">
               Learn at your pace. From beginner to pro-level — tailored programs on Forex, Crypto, Stocks, and Technical Analysis — with certifications.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: BOTTOM CONTENT SECTION - 768px height */}
+      <section 
+        className="relative w-full h-[768px] flex items-center overflow-hidden"
+        style={{ 
+          backgroundImage: `url('https://res.cloudinary.com/dsamz0zji/image/upload/v1766490302/Untitled_Website_ohs4ke.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-20">
+          {/* Left Column: Community Image */}
+          <div className="flex justify-center items-center">
+            <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+               <img 
+                 src="https://res.cloudinary.com/dsamz0zji/image/upload/v1766508252/Untitled_600_x_600_px_3_bx6vdf.png" 
+                 alt="Trader community collaborating" 
+                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+               />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+            </div>
+          </div>
+
+          {/* Right Column: Pill Pods */}
+          <div className="flex flex-col space-y-8 w-full max-w-xl">
+            {/* Pod 1: Investment Talk Nights */}
+            <div className="bg-gradient-to-r from-black via-black/95 to-amber-600 rounded-[3.5rem] p-10 md:p-12 border border-white/5 shadow-2xl flex flex-col items-center text-center">
+              <h3 className="text-lg md:text-xl font-bold text-white mb-3 uppercase tracking-wider">
+                Investment Talk Nights
+              </h3>
+              <p className="text-white text-[12px] md:text-[14px] leading-relaxed max-w-md font-normal">
+                Weekly community sessions where experts, guests, or even members share insights about trading, investing, and financial independence — in a cozy café vibe.
+              </p>
+            </div>
+
+            {/* Pod 2: Chill & Create Zone */}
+            <div className="bg-gradient-to-r from-black via-black/95 to-amber-600 rounded-[3.5rem] p-10 md:p-12 border border-white/5 shadow-2xl flex flex-col items-center text-center">
+              <h3 className="text-lg md:text-xl font-bold text-white mb-3 uppercase tracking-wider">
+                Chill & Create Zone
+              </h3>
+              <p className="text-white text-[12px] md:text-[14px] leading-relaxed max-w-md font-normal">
+                A relaxed spot to brainstorm business ideas, journal your trades, or simply enjoy creative conversations. Because great minds think better over good coffee.
+              </p>
+            </div>
           </div>
         </div>
       </section>
