@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 interface HeaderProps {
-  onNavigate: (page: 'home' | 'about') => void;
+  onNavigate: (page: 'home' | 'about' | 'services') => void;
   activePage: string;
 }
 
@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, activePage }) => {
   const navLinks = [
     { name: 'Home', action: () => onNavigate('home'), id: 'home' },
     { name: 'About Us', action: () => onNavigate('about'), id: 'about' },
-    { name: 'Services', action: () => {}, id: 'services' },
+    { name: 'Services', action: () => onNavigate('services'), id: 'services' },
     { name: 'Members', action: () => {}, id: 'members' },
     { name: 'Contact Us', action: () => {}, id: 'contact' },
   ];

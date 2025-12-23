@@ -4,9 +4,10 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import VideoSection from './components/VideoSection';
 import AboutPage from './components/AboutPage';
+import ServicesPage from './components/ServicesPage';
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<'home' | 'about'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'services'>('home');
 
   // Handle browser back/forward and initial load if hash is present
   useEffect(() => {
@@ -14,6 +15,8 @@ const App: React.FC = () => {
       const hash = window.location.hash;
       if (hash === '#about') {
         setCurrentPage('about');
+      } else if (hash === '#services') {
+        setCurrentPage('services');
       } else {
         setCurrentPage('home');
       }
@@ -25,8 +28,8 @@ const App: React.FC = () => {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  const navigateTo = (page: 'home' | 'about') => {
-    window.location.hash = page === 'about' ? 'about' : '';
+  const navigateTo = (page: 'home' | 'about' | 'services') => {
+    window.location.hash = page === 'home' ? '' : page;
     setCurrentPage(page);
     window.scrollTo(0, 0);
   };
@@ -35,14 +38,14 @@ const App: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-black">
       <Header onNavigate={navigateTo} activePage={currentPage} />
       <main className="flex-grow">
-        {currentPage === 'home' ? (
+        {currentPage === 'home' && (
           <>
             <Hero />
             <VideoSection />
           </>
-        ) : (
-          <AboutPage />
         )}
+        {currentPage === 'about' && <AboutPage />}
+        {currentPage === 'services' && <ServicesPage />}
       </main>
       <footer className="bg-zinc-900 py-12 text-center text-zinc-500 text-sm border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
