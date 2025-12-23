@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const AboutPage: React.FC = () => {
@@ -40,7 +41,7 @@ const AboutPage: React.FC = () => {
 
       {/* 2. Mission & Vision Section - Height 1350px */}
       <section 
-        className="relative w-full h-[1350px] flex flex-col items-center justify-center overflow-hidden border-y border-white/5"
+        className="relative w-full h-[1350px] flex flex-col items-center justify-start pt-32 md:pt-48 overflow-hidden border-y border-white/5"
         style={{ 
           backgroundImage: `url('https://res.cloudinary.com/dsamz0zji/image/upload/v1766490485/Untitled_design_5_mvfst3.png')`,
           backgroundSize: 'cover',
@@ -48,26 +49,29 @@ const AboutPage: React.FC = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {/* Significantly lightened overlay for clear background visibility */}
-        <div className="absolute inset-0 bg-black/35 z-0" />
-        {/* Very subtle radial gradient */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_black_70%)] z-[1] opacity-30" />
+        {/* Adjusted overlay to ensure text is readable but background is visible */}
+        <div className="absolute inset-0 bg-black/20 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/20 z-[1]" />
         
-        <div className="relative z-10 max-w-6xl mx-auto px-6 grid grid-cols-1 gap-48 md:gap-64">
-          <div className="text-center md:text-left group">
-            <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-8 text-blue-500 drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] transition-transform duration-500 group-hover:translate-x-4">Our Mission</h2>
-            <p className="text-2xl md:text-4xl text-white leading-tight font-bold max-w-4xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
-              Empowering the modern trader with the tools, community, and discipline required for long-term financial excellence.
+        <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 w-full">
+          {/* Vision - Left Side */}
+          <div className="flex flex-col items-center text-center">
+            <h2 className="font-serif text-4xl md:text-6xl text-white mb-6 md:mb-10 tracking-wide drop-shadow-lg font-normal">
+              OUR VISION
+            </h2>
+            <p className="text-lg md:text-2xl text-white/95 leading-relaxed max-w-lg font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              To build a creative trading community café where practice, collaboration, and innovation meet — shaping the next generation of smart traders and financial thinkers.
             </p>
-            <div className="h-1 w-24 bg-blue-500 mt-8 transition-all duration-500 group-hover:w-48 shadow-lg" />
           </div>
           
-          <div className="text-center md:text-right flex flex-col md:items-end group">
-            <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-8 text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] transition-transform duration-500 group-hover:-translate-x-4">Our Vision</h2>
-            <p className="text-2xl md:text-4xl text-white leading-tight font-bold max-w-4xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
-              To become the global benchmark for professional trading environments, bridging the gap between digital markets and physical networking.
+          {/* Mission - Right Side */}
+          <div className="flex flex-col items-center text-center">
+            <h2 className="font-serif text-4xl md:text-6xl text-white mb-6 md:mb-10 tracking-wide drop-shadow-lg font-normal">
+              OUR MISSION
+            </h2>
+            <p className="text-lg md:text-2xl text-white/95 leading-relaxed max-w-lg font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              To make trading, investing, and learning accessible to everyone — in an inspiring, collaborative, and coffee-fueled environment.
             </p>
-            <div className="h-1 w-24 bg-white mt-8 transition-all duration-500 group-hover:w-48 shadow-lg" />
           </div>
         </div>
       </section>
