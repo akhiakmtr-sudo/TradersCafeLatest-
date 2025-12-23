@@ -76,7 +76,7 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. Our Mentors Section - Height 760px */}
+      {/* 3. Our Mentors Section */}
       <section 
         className="relative w-full h-[760px] flex items-center justify-center overflow-hidden border-b border-white/5"
         style={{ 
@@ -86,24 +86,29 @@ const AboutPage: React.FC = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {/* Transparent overlay to maintain image clarity */}
-        <div className="absolute inset-0 bg-black/30 z-0" />
+        {/* Light Overlay to ensure text readability against the art in background */}
+        <div className="absolute inset-0 bg-black/10 z-0" />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-          <h2 className="text-4xl md:text-6xl font-bold mb-16 text-center tracking-tighter uppercase drop-shadow-lg">Our <span className="text-blue-500">Mentors</span></h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8 aspect-[4/5] flex flex-col items-center justify-end hover:bg-black/60 transition-all duration-500 group">
-                <div className="w-full h-48 bg-zinc-800/80 rounded-lg mb-6 group-hover:scale-105 transition-transform duration-500" />
-                <h3 className="text-xl font-bold uppercase tracking-widest text-white drop-shadow-md">Mentor Name</h3>
-                <p className="text-blue-400 text-sm mt-2 uppercase tracking-tighter font-semibold drop-shadow-md">Trading Expert</p>
-              </div>
-            ))}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full h-full grid grid-cols-1 md:grid-cols-2">
+          {/* Left Column - Title */}
+          <div className="flex flex-col justify-start pt-20 md:pt-24">
+            <h2 className="font-serif text-4xl md:text-6xl text-white font-normal tracking-wide drop-shadow-lg">
+              OUR MENTORS
+            </h2>
+          </div>
+
+          {/* Right Column - Text Content */}
+          <div className="flex flex-col justify-center items-center text-center px-4 md:pl-12">
+             <div className="max-w-xl text-center">
+                <p className="text-lg md:text-xl text-white/95 leading-relaxed font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  Guided by experience, driven by clarity. Our mentors bring years of hands-on market exposure across Indian and U.S. markets. They don’t just share strategies—they share perspective, discipline, and real-world insights. What sets them apart is live practice with mentors—learning by doing, side by side. This practical, trader-first approach helps you build confidence, discipline, and clarity while navigating real market conditions.
+                </p>
+             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. Our Team Section - Height 760px */}
+      {/* 4. Our Team Section */}
       <section 
         className="relative w-full h-[760px] flex items-center justify-center overflow-hidden"
         style={{ 
@@ -113,21 +118,35 @@ const AboutPage: React.FC = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {/* Transparent overlay to maintain image clarity */}
-        <div className="absolute inset-0 bg-black/40 z-0" />
+        <div className="absolute inset-0 bg-black/10 z-0" />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-          <h2 className="text-4xl md:text-6xl font-bold mb-16 text-center tracking-tighter uppercase drop-shadow-lg">Our <span className="text-blue-500">Team</span></h2>
-          <div className="flex flex-wrap justify-center gap-12">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="flex flex-col items-center space-y-4 group">
-                <div className="w-32 h-32 md:w-40 md:h-40 bg-zinc-800/80 rounded-full border-2 border-white/20 group-hover:border-blue-500 transition-all duration-300 transform group-hover:scale-110 shadow-2xl overflow-hidden" />
-                <div className="text-center px-4 py-2 bg-black/40 backdrop-blur-sm rounded-lg">
-                  <h4 className="font-bold uppercase text-sm tracking-widest text-white drop-shadow-md">Team Member</h4>
-                  <p className="text-zinc-300 text-[10px] uppercase mt-1 font-semibold drop-shadow-md">Designation</p>
-                </div>
-              </div>
-            ))}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full h-full grid grid-cols-1 md:grid-cols-2">
+           {/* Left Column - Title */}
+           <div className="flex flex-col justify-start pt-20 md:pt-24">
+            <h2 className="font-serif text-4xl md:text-6xl text-white font-normal tracking-wide drop-shadow-lg">
+              TEAM
+            </h2>
+          </div>
+
+          {/* Right Column - Content */}
+          <div className="flex flex-col justify-center items-center text-center space-y-16 px-4 md:pl-12">
+             
+             {/* Block 1 */}
+             <div className="max-w-lg">
+                <h3 className="text-xl md:text-2xl font-normal text-white mb-3">IT & Social Media</h3>
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  Platform management, online events, live trading sessions, and digital promotions They ensure the café stays connected, smart, and tech-driven.
+                </p>
+             </div>
+
+             {/* Block 2 */}
+             <div className="max-w-lg">
+                <h3 className="text-xl md:text-2xl font-normal text-white mb-3">Finance</h3>
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  We Ensure smooth operations for both our internal activities and investor partnerships. Focused on accuracy, clarity, and sustainability in every transaction.
+                </p>
+             </div>
+
           </div>
         </div>
       </section>
