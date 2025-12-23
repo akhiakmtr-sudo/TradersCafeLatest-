@@ -3,40 +3,42 @@ import React from 'react';
 
 const AboutPage: React.FC = () => {
   return (
-    <div className="flex flex-col w-full">
-      {/* 1. About Us Section - Height 760px */}
+    <div className="flex flex-col w-full bg-black">
+      {/* 1. About Us Section - Precise recreation with the requested image and dimensions */}
       <section 
-        className="relative w-full h-[760px] flex items-center justify-center overflow-hidden"
+        className="relative w-full min-h-[850px] flex flex-col justify-start items-start overflow-hidden pt-40 pb-24 px-6 md:px-20 lg:px-32"
         style={{ 
-          backgroundImage: `url('https://res.cloudinary.com/dsamz0zji/image/upload/v1766490302/Untitled_Website_ohs4ke.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          background: 'linear-gradient(to right, #000000 0%, #000000 45%, #856a1e 100%)',
         }}
       >
-        {/* Lighter Overlay for better background visibility */}
-        <div className="absolute inset-0 bg-black/25 z-0" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/30 z-[1]" />
-        
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-10 tracking-tighter uppercase drop-shadow-2xl">
-            About <span className="text-blue-500">Us</span>
+        <div className="relative z-10 w-full max-w-7xl">
+          {/* Header - Normal size (5xl to 7xl) as requested */}
+          <h1 className="font-serif text-5xl md:text-7xl text-white mb-16 tracking-wide font-normal uppercase leading-tight select-none">
+            ABOUT US
           </h1>
-          <div className="space-y-6 text-white max-w-4xl mx-auto">
-            <p className="text-lg md:text-2xl font-semibold leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+          
+          {/* Content Block - Perfectly aligned left text with comfortable reading measure */}
+          <div className="max-w-4xl space-y-8 text-white/90 text-left mb-14">
+            <p className="text-lg md:text-xl leading-[1.7] font-light tracking-wide">
               Welcome to Trader’s Net Cafe — Ever wondered what it feels like to sit beside real traders and experience the markets as they move? Step into a focused space where you can practice alongside experienced traders and observe live market strategies as they unfold.
             </p>
-            <p className="text-base md:text-lg leading-relaxed font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            <p className="text-lg md:text-xl leading-[1.7] font-light tracking-wide">
               Built for active market participants, our café blends professional tools, live market access, and a focused trading atmosphere. Trade independently, exchange insights, and sharpen your edge alongside experienced traders across U.S. and Indian markets.
             </p>
-            <p className="text-lg md:text-xl font-bold text-blue-400 italic drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] bg-black/20 py-2 rounded-lg inline-block px-4">
+            <p className="text-lg md:text-xl leading-[1.7] font-light tracking-wide">
               At Traders Net Café, it’s not just about trading—it’s about trading with clarity, confidence, and community.
             </p>
           </div>
+
+          {/* About Us Featured Image - Exact 850px width and 200px height with new Cloudinary URL */}
+          <div className="w-full max-w-[850px] h-[200px] overflow-hidden rounded-sm shadow-2xl border border-white/5 bg-zinc-900/50">
+            <img 
+              src="https://res.cloudinary.com/dsamz0zji/image/upload/v1766508252/Untitled_600_x_600_px_3_bx6vdf.png" 
+              alt="Trading community at cafe" 
+              className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+            />
+          </div>
         </div>
-        
-        {/* Decorative bottom element */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent z-10" />
       </section>
 
       {/* 2. Mission & Vision Section - Height 1350px */}
@@ -49,12 +51,11 @@ const AboutPage: React.FC = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {/* Adjusted overlay to ensure text is readable but background is visible */}
         <div className="absolute inset-0 bg-black/20 z-0" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/20 z-[1]" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 w-full">
-          {/* Vision - Left Side */}
+          {/* Vision */}
           <div className="flex flex-col items-center text-center">
             <h2 className="font-serif text-4xl md:text-6xl text-white mb-6 md:mb-10 tracking-wide drop-shadow-lg font-normal">
               OUR VISION
@@ -64,7 +65,7 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
           
-          {/* Mission - Right Side */}
+          {/* Mission */}
           <div className="flex flex-col items-center text-center">
             <h2 className="font-serif text-4xl md:text-6xl text-white mb-6 md:mb-10 tracking-wide drop-shadow-lg font-normal">
               OUR MISSION
@@ -86,15 +87,21 @@ const AboutPage: React.FC = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {/* Light Overlay to ensure text readability against the art in background */}
         <div className="absolute inset-0 bg-black/10 z-0" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full h-full grid grid-cols-1 md:grid-cols-2">
-          {/* Left Column - Title */}
-          <div className="flex flex-col justify-start pt-20 md:pt-24">
-            <h2 className="font-serif text-4xl md:text-6xl text-white font-normal tracking-wide drop-shadow-lg">
+          {/* Left Column - Title & Image */}
+          <div className="flex flex-col justify-start pt-16 md:pt-20">
+            <h2 className="font-serif text-4xl md:text-6xl text-white font-normal tracking-wide drop-shadow-lg mb-8">
               OUR MENTORS
             </h2>
+            <div className="relative w-full max-w-[500px] aspect-square mx-auto md:mx-0 overflow-hidden rounded-xl">
+               <img 
+                 src="https://res.cloudinary.com/dsamz0zji/image/upload/v1766506589/Untitled_600_x_600_px_1_zawoyn.png" 
+                 alt="Our Mentors" 
+                 className="w-full h-full object-cover drop-shadow-2xl"
+               />
+            </div>
           </div>
 
           {/* Right Column - Text Content */}
@@ -121,32 +128,32 @@ const AboutPage: React.FC = () => {
         <div className="absolute inset-0 bg-black/10 z-0" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full h-full grid grid-cols-1 md:grid-cols-2">
-           {/* Left Column - Title */}
-           <div className="flex flex-col justify-start pt-20 md:pt-24">
-            <h2 className="font-serif text-4xl md:text-6xl text-white font-normal tracking-wide drop-shadow-lg">
+           <div className="flex flex-col justify-start pt-16 md:pt-20">
+            <h2 className="font-serif text-4xl md:text-6xl text-white font-normal tracking-wide drop-shadow-lg mb-8">
               TEAM
             </h2>
+            <div className="relative w-full max-w-[500px] aspect-square mx-auto md:mx-0 overflow-hidden rounded-xl">
+               <img 
+                 src="https://res.cloudinary.com/dsamz0zji/image/upload/v1766506585/Untitled_600_x_600_px_m4t97s.png" 
+                 alt="Our Team" 
+                 className="w-full h-full object-cover drop-shadow-2xl"
+               />
+            </div>
           </div>
 
-          {/* Right Column - Content */}
           <div className="flex flex-col justify-center items-center text-center space-y-16 px-4 md:pl-12">
-             
-             {/* Block 1 */}
              <div className="max-w-lg">
                 <h3 className="text-xl md:text-2xl font-normal text-white mb-3">IT & Social Media</h3>
                 <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Platform management, online events, live trading sessions, and digital promotions They ensure the café stays connected, smart, and tech-driven.
                 </p>
              </div>
-
-             {/* Block 2 */}
              <div className="max-w-lg">
                 <h3 className="text-xl md:text-2xl font-normal text-white mb-3">Finance</h3>
                 <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   We Ensure smooth operations for both our internal activities and investor partnerships. Focused on accuracy, clarity, and sustainability in every transaction.
                 </p>
              </div>
-
           </div>
         </div>
       </section>
