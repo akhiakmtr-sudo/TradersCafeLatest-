@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutPage: React.FC = () => {
   return (
-    <div className="flex flex-col w-full bg-black">
+    <div className="flex flex-col w-full bg-black font-sans">
       {/* 1. About Us Section */}
       <section 
         className="relative w-full min-h-[850px] flex flex-col justify-start items-start overflow-hidden pt-40 pb-24 px-6 md:px-20 lg:px-32"
@@ -16,14 +16,14 @@ const AboutPage: React.FC = () => {
             ABOUT US
           </h1>
           
-          <div className="max-w-4xl space-y-8 text-white text-left mb-14">
-            <p className="text-lg md:text-xl leading-[1.7] font-medium tracking-wide drop-shadow-sm">
+          <div className="max-w-4xl space-y-8 text-white mb-14">
+            <p className="text-lg md:text-xl leading-[1.7] font-normal tracking-wide drop-shadow-sm text-justify hyphens-auto">
               Welcome to Trader’s Net Cafe — Ever wondered what it feels like to sit beside real traders and experience the markets as they move? Step into a focused space where you can practice alongside experienced traders and observe live market strategies as they unfold.
             </p>
-            <p className="text-lg md:text-xl leading-[1.7] font-medium tracking-wide drop-shadow-sm">
+            <p className="text-lg md:text-xl leading-[1.7] font-normal tracking-wide drop-shadow-sm text-justify hyphens-auto">
               Built for active market participants, our café blends professional tools, live market access, and a focused trading atmosphere. Trade independently, exchange insights, and sharpen your edge alongside experienced traders across U.S. and Indian markets.
             </p>
-            <p className="text-lg md:text-xl leading-[1.7] font-medium tracking-wide drop-shadow-sm">
+            <p className="text-lg md:text-xl leading-[1.7] font-normal tracking-wide drop-shadow-sm text-justify hyphens-auto">
               At Traders Net Café, it’s not just about trading—it’s about trading with clarity, confidence, and community.
             </p>
           </div>
@@ -51,21 +51,21 @@ const AboutPage: React.FC = () => {
         {/* Overlays removed */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 w-full">
           {/* Vision */}
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-center">
             <h2 className="text-4xl md:text-6xl text-white mb-6 md:mb-10 tracking-wider font-bold uppercase drop-shadow-[0_4px_10px_rgba(0,0,0,1)]">
               OUR VISION
             </h2>
-            <p className="text-lg md:text-2xl text-white leading-relaxed max-w-lg font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
+            <p className="text-lg md:text-2xl text-white leading-relaxed max-w-lg font-normal drop-shadow-[0_2px_8px_rgba(0,0,0,1)] text-center">
               To build a creative trading community café where practice, collaboration, and innovation meet — shaping the next generation of smart traders and financial thinkers.
             </p>
           </div>
           
           {/* Mission */}
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-center">
             <h2 className="text-4xl md:text-6xl text-white mb-6 md:mb-10 tracking-wider font-bold uppercase drop-shadow-[0_4px_10px_rgba(0,0,0,1)]">
               OUR MISSION
             </h2>
-            <p className="text-lg md:text-2xl text-white leading-relaxed max-w-lg font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
+            <p className="text-lg md:text-2xl text-white leading-relaxed max-w-lg font-normal drop-shadow-[0_2px_8px_rgba(0,0,0,1)] text-center">
               To make trading, investing, and learning accessible to everyone — in an inspiring, collaborative, and coffee-fueled environment.
             </p>
           </div>
@@ -97,9 +97,9 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center items-center text-center px-4 md:pl-12">
-             <div className="max-w-xl text-center">
-                <p className="text-lg md:text-xl text-white leading-relaxed font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
+          <div className="flex flex-col justify-center px-4 md:pl-12">
+             <div className="max-w-xl w-full">
+                <p className="text-lg md:text-xl text-white leading-relaxed font-normal text-justify hyphens-auto drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
                   Guided by experience, driven by clarity. Our mentors bring years of hands-on market exposure across Indian and U.S. markets. They don’t just share strategies—they share perspective, discipline, and real-world insights. What sets them apart is live practice with mentors—learning by doing, side by side. This practical, trader-first approach helps you build confidence, discipline, and clarity while navigating real market conditions.
                 </p>
              </div>
@@ -132,16 +132,16 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center items-center text-center space-y-16 px-4 md:pl-12">
-             <div className="max-w-lg">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 uppercase tracking-wider drop-shadow-md">IT & Social Media</h3>
-                <p className="text-lg md:text-xl text-white leading-relaxed font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
+          <div className="flex flex-col justify-center items-center md:items-start space-y-16 px-4 md:pl-12">
+             <div className="max-w-lg w-full">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 uppercase tracking-wider drop-shadow-md text-center md:text-left">IT & Social Media</h3>
+                <p className="text-lg md:text-xl text-white leading-relaxed font-normal text-justify hyphens-auto drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
                   Platform management, online events, live trading sessions, and digital promotions They ensure the café stays connected, smart, and tech-driven.
                 </p>
              </div>
-             <div className="max-w-lg">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 uppercase tracking-wider drop-shadow-md">Finance</h3>
-                <p className="text-lg md:text-xl text-white leading-relaxed font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
+             <div className="max-w-lg w-full">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 uppercase tracking-wider drop-shadow-md text-center md:text-left">Finance</h3>
+                <p className="text-lg md:text-xl text-white leading-relaxed font-normal text-justify hyphens-auto drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
                   We Ensure smooth operations for both our internal activities and investor partnerships. Focused on accuracy, clarity, and sustainability in every transaction.
                 </p>
              </div>
