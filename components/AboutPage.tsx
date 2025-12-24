@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const AboutPage: React.FC = () => {
@@ -37,33 +38,43 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 2. Mission & Vision Section */}
+      {/* 2. Mission & Vision Section - EXACTLY AS REQUESTED */}
       <section 
-        className="relative w-full min-h-screen flex flex-col items-center justify-center py-24 overflow-hidden border-y border-white/5"
+        className="relative w-full h-[1300px] flex flex-col items-center justify-start overflow-hidden"
         style={{ 
-          backgroundImage: `url('https://res.cloudinary.com/dsamz0zji/image/upload/v1766490485/Untitled_design_5_mvfst3.png')`,
+          backgroundImage: `url('https://res.cloudinary.com/dufnwlqeq/image/upload/v1766613889/Untitled_design_5_ftle6e.png')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center top',
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 w-full">
-          <div className="flex flex-col items-center">
-            <h2 className="font-heading text-white mb-8 drop-shadow-[0_4px_10px_rgba(0,0,0,1)] text-center">
+        {/* Subtle overlay */}
+        <div className="absolute inset-0 bg-black/10 z-0 pointer-events-none" />
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-x-20 pt-[320px]">
+          
+          {/* VISION COLUMN */}
+          <div className="flex flex-col items-center text-center">
+            <h2 className="font-heading text-white mb-8" style={{ fontSize: '36px' }}>
               OUR VISION
             </h2>
-            <p className="font-body text-white max-w-lg drop-shadow-[0_2px_8px_rgba(0,0,0,1)] text-center">
-              To build a creative trading community café where practice, collaboration, and innovation meet — shaping the next generation of smart traders and financial thinkers.
-            </p>
+            <div className="max-w-[450px]">
+              <p className="font-body text-white leading-relaxed" style={{ fontSize: '16px' }}>
+                To build a creative trading community café where practice, collaboration, and innovation meet — shaping the next generation of smart traders and financial thinkers.
+              </p>
+            </div>
           </div>
           
-          <div className="flex flex-col items-center">
-            <h2 className="font-heading text-white mb-8 drop-shadow-[0_4px_10px_rgba(0,0,0,1)] text-center">
+          {/* MISSION COLUMN */}
+          <div className="flex flex-col items-center text-center">
+            <h2 className="font-heading text-white mb-8" style={{ fontSize: '36px' }}>
               OUR MISSION
             </h2>
-            <p className="font-body text-white max-w-lg drop-shadow-[0_2px_8px_rgba(0,0,0,1)] text-center">
-              To make trading, investing, and learning accessible to everyone — in an inspiring, collaborative, and coffee-fueled environment.
-            </p>
+            <div className="max-w-[450px]">
+              <p className="font-body text-white leading-relaxed" style={{ fontSize: '16px' }}>
+                To make trading, investing, and learning accessible to everyone — in an inspiring, collaborative, and coffee-fueled environment.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -128,13 +139,13 @@ const AboutPage: React.FC = () => {
 
           <div className="flex flex-col justify-center space-y-12">
              <div className="max-w-lg w-full">
-                <h3 className="font-heading text-white mb-4 drop-shadow-md text-sm sm:text-lg">IT & Social Media</h3>
+                <h3 className="font-heading text-white mb-4 drop-shadow-md text-sm sm:text-lg uppercase">IT & Social Media</h3>
                 <p className="font-body text-white text-justify hyphens-auto drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
                   Platform management, online events, live trading sessions, and digital promotions They ensure the café stays connected, smart, and tech-driven.
                 </p>
              </div>
              <div className="max-w-lg w-full">
-                <h3 className="font-heading text-white mb-4 drop-shadow-md text-sm sm:text-lg">Finance</h3>
+                <h3 className="font-heading text-white mb-4 drop-shadow-md text-sm sm:text-lg uppercase">Finance</h3>
                 <p className="font-body text-white text-justify hyphens-auto drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
                   We Ensure smooth operations for both our internal activities and investor partnerships. Focused on accuracy, clarity, and sustainability in every transaction.
                 </p>
