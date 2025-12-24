@@ -189,7 +189,7 @@ const ServicesPage: React.FC = () => {
           <div className="flex justify-center items-center">
             <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
                <img 
-                 src="https://res.cloudinary.com/dsamz0zji/image/upload/v1766508252/Untitled_600_x_600_px_3_bx6vdf.png" 
+                 src="https://res.cloudinary.com/dufnwlqeq/image/upload/v1766570497/Untitled_600_x_600_px_500_x_500_px_jjejss.png" 
                  alt="Trader community collaborating" 
                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                />

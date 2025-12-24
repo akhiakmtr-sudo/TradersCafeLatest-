@@ -52,7 +52,7 @@ const App: React.FC = () => {
         {currentPage === 'members' && <MembersPage />}
       </main>
       
-      {/* UPDATED STYLIZED FOOTER */}
+      {/* UPDATED STYLIZED FOOTER WITH LOGO SITTING DIRECTLY ON BACKGROUND */}
       <footer 
         id="contact-footer"
         className="relative w-full py-16 px-6 md:px-20 overflow-hidden"
@@ -67,17 +67,14 @@ const App: React.FC = () => {
           {/* Top Divider */}
           <div className="w-full h-[1px] bg-white/10 mb-16" />
 
-          {/* Center Logo Area */}
+          {/* Center Logo Area - Container removed as requested */}
           <div className="flex flex-col items-center mb-20">
-            <div className="w-48 h-48 bg-[#1e1e1e]/80 backdrop-blur-sm p-4 rounded-sm shadow-2xl border border-white/5 flex flex-col items-center justify-center text-center">
+            <div className="w-56 sm:w-64 md:w-72 transform hover:scale-105 transition-transform duration-500">
                <img 
-                 src="https://res.cloudinary.com/dufnwlqeq/image/upload/v1766570012/Untitled_design_6_itcn6y.png" 
+                 src="https://res.cloudinary.com/dsamz0zji/image/upload/v1766435137/Untitled_design_3_iwdkwo.png" 
                  alt="Traders Net Cafe Logo" 
-                 className="w-full h-auto mb-2"
+                 className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
                />
-               <div className="text-[9px] text-amber-500 font-bold tracking-[0.3em] uppercase">
-                 Connect | Practice | Master
-               </div>
             </div>
           </div>
 
@@ -86,17 +83,18 @@ const App: React.FC = () => {
             {/* Location */}
             <div className="flex flex-col items-center md:items-start">
               <h4 className="text-white text-xs font-bold tracking-[0.2em] uppercase mb-4">Location</h4>
-              <p className="text-white/70 text-[11px] mb-1">PRACTICE HUB</p>
+              <p className="text-white/70 text-[11px] mb-1 uppercase tracking-wider">PRACTICE HUB</p>
               <p className="text-white/70 text-[11px] mb-1">Tel: +971 50 416 1426</p>
-              <a href="mailto:traderanetcafe@gmail.com" className="text-white/70 text-[11px] hover:text-amber-500 transition-colors">traderanetcafe@gmail.com</a>
+              <a href="mailto:traderanetcafe@gmail.com" className="text-white/70 text-[11px] hover:text-amber-500 transition-colors border-b border-transparent hover:border-amber-500/30">traderanetcafe@gmail.com</a>
             </div>
 
             {/* Business Hours & Web */}
             <div className="flex flex-col items-center">
               <h4 className="text-white text-xs font-bold tracking-[0.2em] uppercase mb-4">Business Hours</h4>
-              <p className="text-white/70 text-[11px] mb-6">Monday to Friday 9am - 7pm</p>
-              <a href="https://www.tradersnetcafe.com" target="_blank" rel="noopener noreferrer" className="text-white text-[13px] font-bold tracking-[0.1em] hover:text-amber-500 transition-colors uppercase">
+              <p className="text-white/70 text-[11px] mb-6 uppercase tracking-wider">Monday to Friday 9am - 7pm</p>
+              <a href="https://www.tradersnetcafe.com" target="_blank" rel="noopener noreferrer" className="text-white text-[13px] font-bold tracking-[0.1em] hover:text-amber-500 transition-all uppercase group">
                 WWW.TRADERSNETCAFE.COM
+                <div className="h-px w-0 group-hover:w-full bg-amber-500 transition-all duration-300 mx-auto" />
               </a>
             </div>
 
@@ -104,15 +102,15 @@ const App: React.FC = () => {
             <div className="flex flex-col items-center md:items-end">
               <h4 className="text-white text-xs font-bold tracking-[0.2em] uppercase mb-4">Get Social</h4>
               <div className="flex space-x-4">
-                 <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[10px] text-white hover:bg-amber-500/20 transition-colors cursor-pointer">t</div>
-                 <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[10px] text-white hover:bg-amber-500/20 transition-colors cursor-pointer">m</div>
+                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-[12px] text-white hover:bg-amber-500 hover:border-amber-500 transition-all cursor-pointer shadow-lg">t</div>
+                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-[12px] text-white hover:bg-amber-500 hover:border-amber-500 transition-all cursor-pointer shadow-lg">m</div>
               </div>
             </div>
           </div>
 
           {/* Copyright */}
           <div className="mt-20 pt-8 border-t border-white/5 w-full text-center">
-             <p className="text-[10px] text-white/30 uppercase tracking-widest">
+             <p className="text-[10px] text-white/30 uppercase tracking-[0.3em] font-medium">
                &copy; {new Date().getFullYear()} Traders Net Cafe. All rights reserved.
              </p>
           </div>
