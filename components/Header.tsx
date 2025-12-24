@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 interface HeaderProps {
-  onNavigate: (page: 'home' | 'about' | 'services') => void;
+  onNavigate: (page: 'home' | 'about' | 'services' | 'members') => void;
   activePage: string;
 }
 
@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, activePage }) => {
     { name: 'Home', action: () => onNavigate('home'), id: 'home' },
     { name: 'About Us', action: () => onNavigate('about'), id: 'about' },
     { name: 'Services', action: () => onNavigate('services'), id: 'services' },
-    { name: 'Members', action: () => {}, id: 'members' },
+    { name: 'Members', action: () => onNavigate('members'), id: 'members' },
     { name: 'Contact Us', action: () => {}, id: 'contact' },
   ];
 

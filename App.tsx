@@ -5,9 +5,10 @@ import Hero from './components/Hero';
 import VideoSection from './components/VideoSection';
 import AboutPage from './components/AboutPage';
 import ServicesPage from './components/ServicesPage';
+import MembersPage from './components/MembersPage';
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'services'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'services' | 'members'>('home');
 
   // Handle browser back/forward and initial load if hash is present
   useEffect(() => {
@@ -17,6 +18,8 @@ const App: React.FC = () => {
         setCurrentPage('about');
       } else if (hash === '#services') {
         setCurrentPage('services');
+      } else if (hash === '#members') {
+        setCurrentPage('members');
       } else {
         setCurrentPage('home');
       }
@@ -28,7 +31,7 @@ const App: React.FC = () => {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  const navigateTo = (page: 'home' | 'about' | 'services') => {
+  const navigateTo = (page: 'home' | 'about' | 'services' | 'members') => {
     window.location.hash = page === 'home' ? '' : page;
     setCurrentPage(page);
     window.scrollTo(0, 0);
@@ -46,6 +49,7 @@ const App: React.FC = () => {
         )}
         {currentPage === 'about' && <AboutPage />}
         {currentPage === 'services' && <ServicesPage />}
+        {currentPage === 'members' && <MembersPage />}
       </main>
       <footer className="bg-zinc-900 py-12 text-center text-zinc-500 text-sm border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
