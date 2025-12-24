@@ -43,11 +43,16 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, activePage }) => {
     { name: 'Contact Us', action: scrollToFooter, id: 'contact' },
   ];
 
+  // Determine if we should show the "Light Mode" header (White bg, dark text)
+  const isLightMode = scrolled || isOpen;
+
   return (
     <>
       <header 
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
-          scrolled || isOpen ? 'bg-black/95 backdrop-blur-xl py-4 border-b border-white/5' : 'bg-transparent py-6'
+          isLightMode 
+            ? 'bg-white/95 backdrop-blur-xl py-4 border-b border-zinc-200 shadow-sm' 
+            : 'bg-transparent py-6'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-end items-center">
@@ -61,25 +66,27 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, activePage }) => {
                   setIsOpen(false);
                 }}
                 className={`text-[11px] font-bold transition-all duration-300 uppercase tracking-[0.25em] relative group ${
-                  activePage === link.id ? 'text-blue-500' : 'text-white hover:text-blue-400'
+                  activePage === link.id 
+                    ? 'text-amber-600' 
+                    : (isLightMode ? 'text-zinc-800 hover:text-amber-600' : 'text-white hover:text-amber-400')
                 }`}
               >
                 {link.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-blue-500 transition-all duration-300 ${activePage === link.id ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-amber-600 transition-all duration-300 ${activePage === link.id ? 'w-full' : 'w-0 group-hover:w-full'}`} />
               </button>
             ))}
           </nav>
 
           {/* Hamburger Button (Visible only on Mobile) */}
           <button 
-            className="md:hidden text-white focus:outline-none w-10 h-10 flex items-center justify-center z-[110]"
+            className="md:hidden focus:outline-none w-10 h-10 flex items-center justify-center z-[110]"
             onClick={() => setIsOpen(true)}
             aria-label="Open Menu"
           >
             <div className="flex flex-col space-y-1.5 w-6">
-              <span className="w-full h-0.5 bg-white rounded-full"></span>
-              <span className="w-full h-0.5 bg-white rounded-full"></span>
-              <span className="w-full h-0.5 bg-white rounded-full"></span>
+              <span className={`w-full h-0.5 rounded-full transition-colors duration-300 ${isLightMode ? 'bg-zinc-900' : 'bg-white'}`}></span>
+              <span className={`w-full h-0.5 rounded-full transition-colors duration-300 ${isLightMode ? 'bg-zinc-900' : 'bg-white'}`}></span>
+              <span className={`w-full h-0.5 rounded-full transition-colors duration-300 ${isLightMode ? 'bg-zinc-900' : 'bg-white'}`}></span>
             </div>
           </button>
         </div>
@@ -93,18 +100,18 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, activePage }) => {
         onClick={() => setIsOpen(false)}
       />
 
-      {/* MOBILE DRAWER MENU (Reference Style) */}
+      {/* MOBILE DRAWER MENU - UPDATED TO WHITE THEME */}
       <div 
-        className={`fixed inset-y-0 right-0 w-full max-w-[320px] bg-zinc-950 z-[200] transform transition-transform duration-300 ease-out shadow-2xl flex flex-col md:hidden border-l border-white/10 ${
+        className={`fixed inset-y-0 right-0 w-full max-w-[320px] bg-white z-[200] transform transition-transform duration-300 ease-out shadow-2xl flex flex-col md:hidden border-l border-zinc-100 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         {/* Drawer Header: Title + Close Button */}
-        <div className="flex items-center justify-between px-6 h-[70px] border-b border-white/10 bg-zinc-900/50 backdrop-blur-sm">
-          <span className="text-sm font-bold text-white uppercase tracking-wider">Traders Net Cafe</span>
+        <div className="flex items-center justify-between px-6 h-[70px] border-b border-zinc-100 bg-white">
+          <span className="text-sm font-bold text-zinc-900 uppercase tracking-wider">Traders Net Cafe</span>
           <button 
             onClick={() => setIsOpen(false)}
-            className="w-8 h-8 flex items-center justify-center rounded-full bg-white/5 text-white/70 hover:bg-white/10 hover:text-white transition-colors"
+            className="w-8 h-8 flex items-center justify-center rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-zinc-900 transition-colors"
           >
             <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 13L13 1M1 1L13 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -113,7 +120,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, activePage }) => {
         </div>
 
         {/* Navigation List */}
-        <div className="flex-1 overflow-y-auto bg-zinc-950">
+        <div className="flex-1 overflow-y-auto bg-white">
           <div className="flex flex-col">
             {navLinks.map((link) => (
               <button
@@ -122,15 +129,15 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, activePage }) => {
                   link.action();
                   setIsOpen(false);
                 }}
-                className={`w-full flex items-center justify-between px-6 py-5 border-b border-white/5 text-left transition-colors active:bg-white/5 ${
-                  activePage === link.id ? 'bg-white/5' : ''
+                className={`w-full flex items-center justify-between px-6 py-5 border-b border-zinc-50 text-left transition-colors active:bg-zinc-50 ${
+                  activePage === link.id ? 'bg-amber-50' : ''
                 }`}
               >
-                <span className={`text-[15px] font-medium tracking-wide ${activePage === link.id ? 'text-amber-500' : 'text-zinc-200'}`}>
+                <span className={`text-[15px] font-medium tracking-wide ${activePage === link.id ? 'text-amber-600' : 'text-zinc-800'}`}>
                   {link.name}
                 </span>
                 {/* Chevron Icon */}
-                <svg className="w-4 h-4 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className={`w-4 h-4 ${activePage === link.id ? 'text-amber-500' : 'text-zinc-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
               </button>
@@ -139,7 +146,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, activePage }) => {
         </div>
 
         {/* Register Button Area (Pinned to Bottom) */}
-        <div className="p-6 border-t border-white/10 bg-zinc-900/50 backdrop-blur-sm safe-area-bottom">
+        <div className="p-6 border-t border-zinc-100 bg-zinc-50 safe-area-bottom">
           <button 
             onClick={() => {
               onNavigate('members');
