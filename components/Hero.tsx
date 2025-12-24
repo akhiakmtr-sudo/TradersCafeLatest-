@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Hero: React.FC = () => {
@@ -20,13 +19,13 @@ const Hero: React.FC = () => {
 
       {/* Content Overlay - Fully Responsive */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 w-full max-w-7xl mx-auto">
-        {/* "Launching" Script Text - Size adjusted to balance with logo width */}
-        <h2 className="font-script text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-6 md:mb-10 z-20 drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)] select-none leading-tight tracking-wide">
+        {/* "Launching" Script Text - Using Alex Brush */}
+        <h2 className="font-script text-white text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] mb-2 md:mb-4 z-20 drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)] select-none leading-none tracking-normal">
           Launching
         </h2>
         
-        {/* Logo Image - Sized to be visually balanced (approx equal visual weight/width) with the text above */}
-        <div className="w-56 sm:w-72 md:w-80 lg:w-96 transform hover:scale-[1.02] transition-transform duration-500">
+        {/* Logo Image - Resized to be smaller as requested */}
+        <div className="w-44 sm:w-52 md:w-60 lg:w-64 transform hover:scale-[1.02] transition-transform duration-500">
           <img 
             src="https://res.cloudinary.com/dsamz0zji/image/upload/v1766435137/Untitled_design_3_iwdkwo.png" 
             alt="Traders Net Cafe Logo"
