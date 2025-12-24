@@ -28,7 +28,7 @@ const MembersPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black pt-32 pb-10 px-6 selection:bg-amber-500/30">
+    <div className="w-full bg-black pt-28 pb-8 px-6 selection:bg-amber-500/30">
       <div 
         className="max-w-5xl mx-auto rounded-[2rem] overflow-hidden border border-white/5 shadow-2xl relative transition-all duration-500"
         style={{ 
