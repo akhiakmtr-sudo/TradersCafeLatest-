@@ -52,67 +52,102 @@ const App: React.FC = () => {
         {currentPage === 'members' && <MembersPage />}
       </main>
       
-      {/* UPDATED STYLIZED FOOTER WITH LOGO SITTING DIRECTLY ON BACKGROUND */}
+      {/* PROFESSIONAL COMPACT FOOTER */}
       <footer 
         id="contact-footer"
-        className="relative w-full py-16 px-6 md:px-20 overflow-hidden"
-        style={{ 
-          backgroundImage: `url('https://res.cloudinary.com/dufnwlqeq/image/upload/v1766569731/Untitled_600_x_600_px_6_cnrznx.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
+        className="relative w-full bg-zinc-950 border-t border-white/10 pt-8 pb-8 overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto flex flex-col items-center">
-          {/* Top Divider */}
-          <div className="w-full h-[1px] bg-white/10 mb-16" />
+        {/* Subtle Background Texture Overlay */}
+        <div 
+          className="absolute inset-0 opacity-10 pointer-events-none mix-blend-soft-light"
+          style={{ 
+            backgroundImage: `url('https://res.cloudinary.com/dufnwlqeq/image/upload/v1766569731/Untitled_600_x_600_px_6_cnrznx.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
 
-          {/* Center Logo Area - Container removed as requested */}
-          <div className="flex flex-col items-center mb-20">
-            <div className="w-56 sm:w-64 md:w-72 transform hover:scale-105 transition-transform duration-500">
-               <img 
-                 src="https://res.cloudinary.com/dsamz0zji/image/upload/v1766435137/Untitled_design_3_iwdkwo.png" 
-                 alt="Traders Net Cafe Logo" 
-                 className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
-               />
-            </div>
-          </div>
-
-          {/* Information Grid */}
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-            {/* Location */}
-            <div className="flex flex-col items-center md:items-start">
-              <h4 className="text-white text-xs font-bold tracking-[0.2em] uppercase mb-4">Location</h4>
-              <p className="text-white/70 text-[11px] mb-1 uppercase tracking-wider">PRACTICE HUB</p>
-              <p className="text-white/70 text-[11px] mb-1">Tel: +971 50 416 1426</p>
-              <a href="mailto:traderanetcafe@gmail.com" className="text-white/70 text-[11px] hover:text-amber-500 transition-colors border-b border-transparent hover:border-amber-500/30">traderanetcafe@gmail.com</a>
-            </div>
-
-            {/* Business Hours & Web */}
-            <div className="flex flex-col items-center">
-              <h4 className="text-white text-xs font-bold tracking-[0.2em] uppercase mb-4">Business Hours</h4>
-              <p className="text-white/70 text-[11px] mb-6 uppercase tracking-wider">Monday to Friday 9am - 7pm</p>
-              <a href="https://www.tradersnetcafe.com" target="_blank" rel="noopener noreferrer" className="text-white text-[13px] font-bold tracking-[0.1em] hover:text-amber-500 transition-all uppercase group">
-                WWW.TRADERSNETCAFE.COM
-                <div className="h-px w-0 group-hover:w-full bg-amber-500 transition-all duration-300 mx-auto" />
-              </a>
-            </div>
-
-            {/* Socials */}
-            <div className="flex flex-col items-center md:items-end">
-              <h4 className="text-white text-xs font-bold tracking-[0.2em] uppercase mb-4">Get Social</h4>
-              <div className="flex space-x-4">
-                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-[12px] text-white hover:bg-amber-500 hover:border-amber-500 transition-all cursor-pointer shadow-lg">t</div>
-                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-[12px] text-white hover:bg-amber-500 hover:border-amber-500 transition-all cursor-pointer shadow-lg">m</div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-12">
+            
+            {/* Brand Column */}
+            <div className="md:col-span-4 flex flex-col items-start">
+              <div className="w-16 mb-6 opacity-90">
+                 <img 
+                   src="https://res.cloudinary.com/dsamz0zji/image/upload/v1766435137/Untitled_design_3_iwdkwo.png" 
+                   alt="Traders Net Cafe Logo" 
+                   className="w-full h-auto"
+                 />
               </div>
+              <p className="text-zinc-500 text-xs leading-relaxed max-w-xs font-medium">
+                The premier trading hub for professionals. Practice, observe, and grow in a focused environment designed for serious market participants.
+              </p>
+            </div>
+
+            {/* Spacer */}
+            <div className="hidden md:block md:col-span-2"></div>
+
+            {/* Info Grid */}
+            <div className="md:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-10">
+              
+              {/* Contact Info */}
+              <div>
+                <h4 className="text-white text-xs font-bold uppercase tracking-widest mb-4">Contact</h4>
+                <div className="space-y-4">
+                  <div className="flex flex-col">
+                    <span className="text-zinc-600 text-[10px] uppercase tracking-wide mb-1">Location</span>
+                    <span className="text-zinc-400 text-xs">PRACTICE HUB</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-zinc-600 text-[10px] uppercase tracking-wide mb-1">Phone</span>
+                    <span className="text-zinc-400 text-xs">+971 50 416 1426</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-zinc-600 text-[10px] uppercase tracking-wide mb-1">Email</span>
+                    <a href="mailto:traderanetcafe@gmail.com" className="text-amber-500 text-xs hover:text-amber-400 transition-colors">traderanetcafe@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Hours */}
+              <div>
+                <h4 className="text-white text-xs font-bold uppercase tracking-widest mb-4">Hours</h4>
+                <div className="space-y-4">
+                  <div className="flex flex-col">
+                    <span className="text-zinc-600 text-[10px] uppercase tracking-wide mb-1">Mon - Fri</span>
+                    <span className="text-zinc-400 text-xs">9:00 AM - 7:00 PM</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-zinc-600 text-[10px] uppercase tracking-wide mb-1">Weekends</span>
+                    <span className="text-zinc-500 text-xs italic">Closed</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Social / Links */}
+              <div>
+                <h4 className="text-white text-xs font-bold uppercase tracking-widest mb-4">Connect</h4>
+                <div className="flex gap-3 mb-6">
+                  <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-amber-600 hover:text-white text-zinc-400 flex items-center justify-center text-xs transition-all cursor-pointer border border-white/5 hover:border-amber-600">t</div>
+                  <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-amber-600 hover:text-white text-zinc-400 flex items-center justify-center text-xs transition-all cursor-pointer border border-white/5 hover:border-amber-600">m</div>
+                </div>
+                <a href="https://www.tradersnetcafe.com" target="_blank" rel="noopener noreferrer" className="inline-block border-b border-zinc-700 pb-0.5 text-zinc-500 hover:text-white hover:border-white text-[10px] uppercase tracking-wider transition-all">
+                  Visit Website
+                </a>
+              </div>
+
             </div>
           </div>
 
-          {/* Copyright */}
-          <div className="mt-20 pt-8 border-t border-white/5 w-full text-center">
-             <p className="text-[10px] text-white/30 uppercase tracking-[0.3em] font-medium">
-               &copy; {new Date().getFullYear()} Traders Net Cafe. All rights reserved.
-             </p>
+          {/* Bottom Bar */}
+          <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-[10px] text-zinc-600 uppercase tracking-widest font-medium">
+              &copy; {new Date().getFullYear()} Traders Net Cafe. All rights reserved.
+            </p>
+            <div className="flex gap-8">
+              <span className="text-[10px] text-zinc-700 hover:text-zinc-500 cursor-pointer uppercase tracking-wider transition-colors">Privacy Policy</span>
+              <span className="text-[10px] text-zinc-700 hover:text-zinc-500 cursor-pointer uppercase tracking-wider transition-colors">Terms of Use</span>
+            </div>
           </div>
         </div>
       </footer>

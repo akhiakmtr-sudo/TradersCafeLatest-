@@ -5,7 +5,7 @@ const VideoSection: React.FC = () => {
   return (
     <section 
       id="video"
-      className="relative w-full py-12 md:py-24 bg-black flex flex-col items-center justify-center px-4 overflow-hidden"
+      className="relative w-full pt-12 md:pt-24 pb-8 bg-black flex flex-col items-center justify-center px-4 overflow-hidden"
     >
       {/* Container to handle the requested 1360x736 size responsiveley */}
       <div 
