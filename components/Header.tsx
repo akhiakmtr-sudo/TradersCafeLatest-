@@ -27,12 +27,20 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, activePage }) => {
     }
   }, [isOpen]);
 
+  const scrollToFooter = () => {
+    const footer = document.getElementById('contact-footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
+
   const navLinks = [
     { name: 'Home', action: () => onNavigate('home'), id: 'home' },
     { name: 'About Us', action: () => onNavigate('about'), id: 'about' },
     { name: 'Services', action: () => onNavigate('services'), id: 'services' },
     { name: 'Members', action: () => onNavigate('members'), id: 'members' },
-    { name: 'Contact Us', action: () => {}, id: 'contact' },
+    { name: 'Contact Us', action: scrollToFooter, id: 'contact' },
   ];
 
   return (
