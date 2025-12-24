@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -95,7 +94,7 @@ const App: React.FC = () => {
                 <h4 className="font-heading text-white mb-6 text-sm tracking-widest">Follow Us</h4>
                 <div className="flex space-x-4">
                   {/* Instagram */}
-                  <a href="#" className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-amber-600/20 hover:border-amber-600/50 hover:shadow-[0_0_15px_rgba(217,119,6,0.3)] transition-all group" aria-label="Instagram">
+                  <a href="https://www.instagram.com/traders_net_cafe?utm_source=qr&igsh=NGQ2aDg4MW5iOHJm" target="_blank" rel="noopener noreferrer" className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-amber-600/20 hover:border-amber-600/50 hover:shadow-[0_0_15px_rgba(217,119,6,0.3)] transition-all group" aria-label="Instagram">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-amber-500 transition-colors">
                       <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
                     </svg>
@@ -109,7 +108,7 @@ const App: React.FC = () => {
                   </a>
 
                   {/* Facebook */}
-                  <a href="#" className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-amber-600/20 hover:border-amber-600/50 hover:shadow-[0_0_15px_rgba(217,119,6,0.3)] transition-all group" aria-label="Facebook">
+                  <a href="https://www.facebook.com/profile.php?id=61585271807789" target="_blank" rel="noopener noreferrer" className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-amber-600/20 hover:border-amber-600/50 hover:shadow-[0_0_15px_rgba(217,119,6,0.3)] transition-all group" aria-label="Facebook">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-amber-500 transition-colors">
                       <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                     </svg>
