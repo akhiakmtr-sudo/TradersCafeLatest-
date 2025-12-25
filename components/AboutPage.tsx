@@ -29,7 +29,7 @@ const AboutPage: React.FC = () => {
 
           <div className="w-full max-w-[850px] aspect-video md:h-[300px] overflow-hidden rounded-sm shadow-2xl border border-white/10 bg-zinc-900/50">
             <img 
-              src="https://res.cloudinary.com/dsamz0zji/image/upload/v1766508252/Untitled_600_x_600_px_3_bx6vdf.png" 
+              src="https://res.cloudinary.com/dufnwlqeq/image/upload/v1766689826/Pale_Green_Geometric_Blank_Page_A4_Landscape_1_vz3qrx.png" 
               alt="Trading community at cafe" 
               className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
             />
