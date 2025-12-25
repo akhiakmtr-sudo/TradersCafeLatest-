@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const VideoSection: React.FC = () => {
@@ -17,7 +16,7 @@ const VideoSection: React.FC = () => {
           loop 
           muted 
           playsInline
-          src="https://res.cloudinary.com/dsamz0zji/video/upload/v1766484347/Untitled_design_modbkw.mp4"
+          src="https://res.cloudinary.com/dufnwlqeq/video/upload/v1766687935/Business_Website_doswp6.mp4"
         />
         
         {/* Subtle Vignette Overlay */}
