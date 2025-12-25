@@ -26,55 +26,55 @@ const MembersPage: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-black pt-32 pb-16 px-6 font-body selection:bg-amber-500/30">
+    <div className="w-full bg-black pt-32 pb-16 px-6 font-body selection:bg-black/20">
       <div 
         className="max-w-5xl mx-auto rounded-[2rem] overflow-hidden border border-white/5 shadow-2xl relative transition-all duration-500"
         style={{ 
-          background: 'linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(166,124,0,0.8) 100%)'
+          background: '#FFD700' // Pure Yellow / Gold
         }}
       >
         {view === 'plan' && (
           <>
-            <div className="p-10 md:p-16 border-b border-white/10">
-              <h1 className="font-heading text-white mb-12">
+            <div className="p-10 md:p-16 border-b border-black/10">
+              <h1 className="font-heading text-black mb-12">
                 MEMBERSHIP
               </h1>
               
               <div className="flex flex-wrap gap-6 mb-16">
                 <button 
                   onClick={() => setView('form')}
-                  className="px-12 py-4 rounded-full bg-gradient-to-b from-amber-800/80 to-amber-950 text-white font-bold tracking-wider hover:scale-105 transition-transform border border-amber-600/30 shadow-lg"
+                  className="w-56 py-4 rounded-full bg-gradient-to-b from-zinc-800 to-zinc-950 text-white font-bold tracking-wider hover:scale-105 transition-transform border border-black/20 shadow-lg text-center"
                 >
                   Register
                 </button>
-                <button className="px-12 py-4 rounded-full bg-gradient-to-b from-zinc-800 to-zinc-950 text-white font-bold tracking-wider hover:scale-105 transition-transform border border-white/5">
+                <button className="w-56 py-4 rounded-full bg-gradient-to-b from-zinc-800 to-zinc-950 text-white font-bold tracking-wider hover:scale-105 transition-transform border border-black/20 shadow-lg text-center">
                   Login
                 </button>
               </div>
 
               <div className="max-w-3xl">
-                <h2 className="font-heading text-white mb-6 normal-case text-2xl">
+                <h2 className="font-heading text-black mb-6 normal-case text-2xl">
                   Become a Member of Traders Net Café
                 </h2>
-                <p className="font-body text-white/80">
+                <p className="font-body text-black/80">
                   Practice. Observe. Grow with real market professionals. Join Traders Net Café and get access to a focused trading environment where aspiring and active traders come together to practice, observe strategies, and sharpen market skills under experienced guidance.
                 </p>
               </div>
             </div>
 
             <div className="p-10 md:p-16">
-              <h2 className="font-heading text-white mb-8">
+              <h2 className="font-heading text-black mb-8">
                 Monthly Membership Plan
               </h2>
               
               <div className="space-y-8">
                 <div>
-                  <p className="font-heading text-white mb-2 text-2xl lowercase normal-case">AED 499 / Month</p>
-                  <p className="font-body text-white/70 italic">A simple, affordable plan designed for serious market participants.</p>
+                  <p className="font-heading text-black mb-2 text-2xl lowercase normal-case">AED 499 / Month</p>
+                  <p className="font-body text-black/70 italic">A simple, affordable plan designed for serious market participants.</p>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="font-body font-bold text-white uppercase tracking-wider border-b border-white/10 pb-2 w-fit">
+                  <h3 className="font-body font-bold text-black uppercase tracking-wider border-b border-black/10 pb-2 w-fit">
                     What's Included:
                   </h3>
                   <ul className="space-y-3">
@@ -86,8 +86,8 @@ const MembersPage: React.FC = () => {
                       "Community discussions and market insights",
                       "One-month flexible membership (no long-term commitment)"
                     ].map((item, i) => (
-                      <li key={i} className="flex items-start font-body text-white/90">
-                        <span className="mr-3 text-amber-500">•</span>
+                      <li key={i} className="flex items-start font-body text-black/90">
+                        <span className="mr-3 text-black font-bold">•</span>
                         {item}
                       </li>
                     ))}
@@ -102,94 +102,94 @@ const MembersPage: React.FC = () => {
           <div className="p-10 md:p-16">
             <button 
               onClick={() => setView('plan')}
-              className="font-body text-amber-500 text-sm font-bold uppercase tracking-widest mb-10 flex items-center hover:text-amber-400 transition-colors"
+              className="font-body text-black/60 text-sm font-bold uppercase tracking-widest mb-10 flex items-center hover:text-black transition-colors"
             >
               <span className="mr-2">←</span> Back to Plans
             </button>
             
-            <h2 className="font-heading text-white mb-12">
+            <h2 className="font-heading text-black mb-12">
               Registration
             </h2>
 
             <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="flex flex-col space-y-2">
-                <label className="font-body text-white/60 text-xs font-bold uppercase tracking-widest">First Name</label>
+                <label className="font-body text-black/70 text-xs font-bold uppercase tracking-widest">First Name</label>
                 <input 
                   required
                   type="text" 
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleInputChange}
-                  className="font-body bg-zinc-900/50 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-amber-500/50 transition-colors"
+                  className="font-body bg-zinc-900 border border-black/10 rounded-lg p-4 text-white focus:outline-none focus:border-black/50 transition-colors placeholder-white/30"
                   placeholder="Enter your first name"
                 />
               </div>
               <div className="flex flex-col space-y-2">
-                <label className="font-body text-white/60 text-xs font-bold uppercase tracking-widest">Middle Name</label>
+                <label className="font-body text-black/70 text-xs font-bold uppercase tracking-widest">Middle Name</label>
                 <input 
                   type="text" 
                   name="middleName"
                   value={formData.middleName}
                   onChange={handleInputChange}
-                  className="font-body bg-zinc-900/50 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-amber-500/50 transition-colors"
+                  className="font-body bg-zinc-900 border border-black/10 rounded-lg p-4 text-white focus:outline-none focus:border-black/50 transition-colors placeholder-white/30"
                   placeholder="Enter your middle name"
                 />
               </div>
               <div className="flex flex-col space-y-2">
-                <label className="font-body text-white/60 text-xs font-bold uppercase tracking-widest">Sur Name</label>
+                <label className="font-body text-black/70 text-xs font-bold uppercase tracking-widest">Sur Name</label>
                 <input 
                   required
                   type="text" 
                   name="surName"
                   value={formData.surName}
                   onChange={handleInputChange}
-                  className="font-body bg-zinc-900/50 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-amber-500/50 transition-colors"
+                  className="font-body bg-zinc-900 border border-black/10 rounded-lg p-4 text-white focus:outline-none focus:border-black/50 transition-colors placeholder-white/30"
                   placeholder="Enter your surname"
                 />
               </div>
               <div className="flex flex-col space-y-2">
-                <label className="font-body text-white/60 text-xs font-bold uppercase tracking-widest">Mobile Number</label>
+                <label className="font-body text-black/70 text-xs font-bold uppercase tracking-widest">Mobile Number</label>
                 <input 
                   required
                   type="tel" 
                   name="mobNo"
                   value={formData.mobNo}
                   onChange={handleInputChange}
-                  className="font-body bg-zinc-900/50 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-amber-500/50 transition-colors"
+                  className="font-body bg-zinc-900 border border-black/10 rounded-lg p-4 text-white focus:outline-none focus:border-black/50 transition-colors placeholder-white/30"
                   placeholder="+971 -- --- ----"
                 />
               </div>
               <div className="flex flex-col space-y-2 md:col-span-2">
-                <label className="font-body text-white/60 text-xs font-bold uppercase tracking-widest">Email Address</label>
+                <label className="font-body text-black/70 text-xs font-bold uppercase tracking-widest">Email Address</label>
                 <input 
                   required
                   type="email" 
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="font-body bg-zinc-900/50 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-amber-500/50 transition-colors"
+                  className="font-body bg-zinc-900 border border-black/10 rounded-lg p-4 text-white focus:outline-none focus:border-black/50 transition-colors placeholder-white/30"
                   placeholder="email@example.com"
                 />
               </div>
               <div className="flex flex-col space-y-2">
-                <label className="font-body text-white/60 text-xs font-bold uppercase tracking-widest">First time attending a session?</label>
+                <label className="font-body text-black/70 text-xs font-bold uppercase tracking-widest">First time attending a session?</label>
                 <select 
                   name="isFirstTime"
                   value={formData.isFirstTime}
                   onChange={handleInputChange}
-                  className="font-body bg-zinc-900/50 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-amber-500/50 appearance-none cursor-pointer"
+                  className="font-body bg-zinc-900 border border-black/10 rounded-lg p-4 text-white focus:outline-none focus:border-black/50 appearance-none cursor-pointer"
                 >
                   <option value="Yes">Yes</option>
                   <option value="No">No</option>
                 </select>
               </div>
               <div className="flex flex-col space-y-2">
-                <label className="font-body text-white/60 text-xs font-bold uppercase tracking-widest">Level of session</label>
+                <label className="font-body text-black/70 text-xs font-bold uppercase tracking-widest">Level of session</label>
                 <select 
                   name="sessionLevel"
                   value={formData.sessionLevel}
                   onChange={handleInputChange}
-                  className="font-body bg-zinc-900/50 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-amber-500/50 appearance-none cursor-pointer"
+                  className="font-body bg-zinc-900 border border-black/10 rounded-lg p-4 text-white focus:outline-none focus:border-black/50 appearance-none cursor-pointer"
                 >
                   <option value="Basic">Basic</option>
                   <option value="Mid Level">Mid Level</option>
@@ -199,7 +199,7 @@ const MembersPage: React.FC = () => {
               <div className="md:col-span-2 pt-8">
                 <button 
                   type="submit"
-                  className="w-full py-5 rounded-full bg-gradient-to-b from-amber-800/80 to-amber-950 text-white font-bold tracking-widest hover:scale-[1.02] transition-all border border-amber-600/30 shadow-2xl uppercase"
+                  className="w-full py-5 rounded-full bg-black text-white font-bold tracking-widest hover:scale-[1.02] transition-all border border-black/10 shadow-2xl uppercase"
                 >
                   Submit Registration
                 </button>
@@ -210,18 +210,18 @@ const MembersPage: React.FC = () => {
 
         {view === 'success' && (
           <div className="p-16 md:p-24 flex flex-col items-center text-center">
-            <div className="w-20 h-20 bg-amber-500/20 rounded-full flex items-center justify-center mb-8 border border-amber-500/50">
-              <svg className="w-10 h-10 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+            <div className="w-20 h-20 bg-black/10 rounded-full flex items-center justify-center mb-8 border border-black/20">
+              <svg className="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
             </div>
-            <h2 className="font-heading text-white mb-6">
+            <h2 className="font-heading text-black mb-6">
               Registration Successful
             </h2>
-            <p className="font-body text-white/70 max-w-lg mb-12">
+            <p className="font-body text-black/70 max-w-lg mb-12">
               We are pleased to confirm your registration. Our admin team will contact you shortly.
             </p>
             <button 
               onClick={() => setView('plan')}
-              className="px-12 py-4 rounded-full bg-white/5 hover:bg-white/10 text-white font-bold tracking-widest border border-white/10 transition-all uppercase"
+              className="px-12 py-4 rounded-full bg-black/5 hover:bg-black/10 text-black font-bold tracking-widest border border-black/10 transition-all uppercase"
             >
               Back to Membership
             </button>
