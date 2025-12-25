@@ -11,6 +11,10 @@ const EMAILJS_PUBLIC_KEY = 'n4o8PZ95f8XdKS1e5';
 const MembersPage: React.FC = () => {
   const [view, setView] = useState<ViewState>('plan');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({
+    mobNo: '',
+    email: ''
+  });
   const [formData, setFormData] = useState({
     firstName: '',
     middleName: '',
@@ -21,17 +25,53 @@ const MembersPage: React.FC = () => {
     sessionLevel: 'Basic'
   });
 
+  const validateEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const validatePhone = (phone: string) => {
+    // Requires + followed by 7 to 15 digits (International E.164 format style)
+    return /^\+\d{7,15}$/.test(phone.replace(/\s/g, ''));
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    
+    // Clear errors when user types
+    if (errors[name as keyof typeof errors]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const newErrors = {
+      mobNo: '',
+      email: ''
+    };
+
+    let hasError = false;
+
+    if (!validateEmail(formData.email)) {
+      newErrors.email = 'Please enter a valid email address (e.g. name@domain.com)';
+      hasError = true;
+    }
+
+    if (!validatePhone(formData.mobNo)) {
+      newErrors.mobNo = 'Enter phone with country code (e.g. +971500000000)';
+      hasError = true;
+    }
+
+    if (hasError) {
+      setErrors(newErrors);
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      // These keys must match the {{variable_name}} used in your EmailJS template
       const templateParams = {
         first_name: formData.firstName,
         middle_name: formData.middleName || 'N/A',
@@ -53,7 +93,7 @@ const MembersPage: React.FC = () => {
       setView('success');
     } catch (error) {
       console.error('EmailJS Error:', error);
-      alert('Submission failed. Please check your EmailJS settings or connection.');
+      alert('Submission failed. Please check your connection.');
     } finally {
       setIsSubmitting(false);
     }
@@ -140,11 +180,13 @@ const MembersPage: React.FC = () => {
               </div>
               <div className="flex flex-col space-y-2">
                 <label className="text-black/70 text-xs font-bold uppercase tracking-widest">Mobile Number</label>
-                <input required disabled={isSubmitting} type="tel" name="mobNo" value={formData.mobNo} onChange={handleInputChange} className="bg-zinc-900 border border-black/10 rounded-lg p-4 text-white focus:outline-none placeholder-white/30" placeholder="+971 -- --- ----" />
+                <input required disabled={isSubmitting} type="tel" name="mobNo" value={formData.mobNo} onChange={handleInputChange} className={`bg-zinc-900 border rounded-lg p-4 text-white focus:outline-none placeholder-white/30 ${errors.mobNo ? 'border-red-500' : 'border-black/10'}`} placeholder="+971 -- --- ----" />
+                {errors.mobNo && <span className="text-[10px] text-red-600 font-bold uppercase tracking-tight">{errors.mobNo}</span>}
               </div>
               <div className="flex flex-col space-y-2 md:col-span-2">
                 <label className="text-black/70 text-xs font-bold uppercase tracking-widest">Email Address</label>
-                <input required disabled={isSubmitting} type="email" name="email" value={formData.email} onChange={handleInputChange} className="bg-zinc-900 border border-black/10 rounded-lg p-4 text-white focus:outline-none placeholder-white/30" placeholder="email@example.com" />
+                <input required disabled={isSubmitting} type="email" name="email" value={formData.email} onChange={handleInputChange} className={`bg-zinc-900 border rounded-lg p-4 text-white focus:outline-none placeholder-white/30 ${errors.email ? 'border-red-500' : 'border-black/10'}`} placeholder="email@example.com" />
+                {errors.email && <span className="text-[10px] text-red-600 font-bold uppercase tracking-tight">{errors.email}</span>}
               </div>
               <div className="flex flex-col space-y-2">
                 <label className="text-black/70 text-xs font-bold uppercase tracking-widest">First time?</label>
