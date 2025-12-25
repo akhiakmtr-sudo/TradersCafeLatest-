@@ -37,7 +37,7 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 2. Mission & Vision Section - EXACTLY AS REQUESTED */}
+      {/* 2. Mission & Vision Section - UPDATED POSITIONING */}
       <section 
         className="relative w-full h-[1300px] flex flex-col items-center justify-start overflow-hidden"
         style={{ 
@@ -50,26 +50,26 @@ const AboutPage: React.FC = () => {
         {/* Subtle overlay */}
         <div className="absolute inset-0 bg-black/10 z-0 pointer-events-none" />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-x-20 pt-[320px]">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start pt-32 md:pt-40 gap-12 md:gap-0">
           
-          {/* VISION COLUMN */}
-          <div className="flex flex-col items-center text-center">
-            <h2 className="font-heading text-white mb-8" style={{ fontSize: '36px' }}>
+          {/* VISION COLUMN - Top Left */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-[450px]">
+            <h2 className="font-heading text-white mb-6 md:mb-8" style={{ fontSize: '36px' }}>
               OUR VISION
             </h2>
-            <div className="max-w-[450px]">
+            <div className="w-full">
               <p className="font-body text-white leading-relaxed" style={{ fontSize: '16px' }}>
                 To build a creative trading community café where practice, collaboration, and innovation meet — shaping the next generation of smart traders and financial thinkers.
               </p>
             </div>
           </div>
           
-          {/* MISSION COLUMN */}
-          <div className="flex flex-col items-center text-center">
-            <h2 className="font-heading text-white mb-8" style={{ fontSize: '36px' }}>
+          {/* MISSION COLUMN - Top Right */}
+          <div className="flex flex-col items-center md:items-end text-center md:text-right max-w-[450px]">
+            <h2 className="font-heading text-white mb-6 md:mb-8" style={{ fontSize: '36px' }}>
               OUR MISSION
             </h2>
-            <div className="max-w-[450px]">
+            <div className="w-full">
               <p className="font-body text-white leading-relaxed" style={{ fontSize: '16px' }}>
                 To make trading, investing, and learning accessible to everyone — in an inspiring, collaborative, and coffee-fueled environment.
               </p>
