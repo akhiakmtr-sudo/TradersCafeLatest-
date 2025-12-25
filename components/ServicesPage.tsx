@@ -85,7 +85,7 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 3: MARKET CAFE STREAM */}
+      {/* SECTION 3: MARKET CAFE STREAM - UPDATED VIDEO TO IMAGE */}
       <section 
         className="relative w-full min-h-screen flex items-center overflow-hidden py-24"
         style={{ 
@@ -98,10 +98,10 @@ const ServicesPage: React.FC = () => {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="flex justify-center items-center">
             <div className="relative w-full max-w-lg aspect-square rounded-sm overflow-hidden shadow-2xl border border-zinc-700/50 backdrop-blur-sm bg-black/40">
-               <video 
-                 src="https://res.cloudinary.com/dsamz0zji/video/upload/v1766513079/Untitled_600_x_600_px_alsjik.mp4" 
+               <img 
+                 src="https://res.cloudinary.com/dufnwlqeq/image/upload/v1766691716/Business_Website_zm7hlq.png" 
+                 alt="Global Market Café Stream" 
                  className="w-full h-full object-cover opacity-90"
-                 autoPlay loop muted playsInline
                />
                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
             </div>
