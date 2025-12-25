@@ -4,9 +4,9 @@ import emailjs from 'https://esm.sh/@emailjs/browser';
 type ViewState = 'plan' | 'form' | 'success';
 
 // EMAILJS CONFIGURATION UPDATED WITH USER CREDENTIALS
-const EMAILJS_SERVICE_ID = 'qnb2veVwUgYHXFV7pMRrV';
-const EMAILJS_TEMPLATE_ID = 'template_3mj2z4d';
-const EMAILJS_PUBLIC_KEY = 'tmf1j02Q20F7sHhWC'; 
+const EMAILJS_SERVICE_ID = 'service_y6tk2dr';
+const EMAILJS_TEMPLATE_ID = 'template_28l7uuo';
+const EMAILJS_PUBLIC_KEY = 'n4o8PZ95f8XdKS1e5'; 
 
 const MembersPage: React.FC = () => {
   const [view, setView] = useState<ViewState>('plan');
