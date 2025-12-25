@@ -67,15 +67,15 @@ const App: React.FC = () => {
                 <div className="space-y-4 font-body">
                   <div className="flex flex-col">
                     <span className="text-white/40 text-[10px] uppercase tracking-widest mb-1">Location</span>
-                    <span className="text-white text-sm">Prism Tower, Business Bay, Dubai, UAE</span>
+                    <span className="text-white text-sm">Practice Hub - Prism Tower, Business Bay, Dubai, UAE</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-white/40 text-[10px] uppercase tracking-widest mb-1">Phone</span>
-                    <span className="text-white text-sm">+971 4 123 4567</span>
+                    <span className="text-white text-sm">+971 504161426</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-white/40 text-[10px] uppercase tracking-widest mb-1">Email</span>
-                    <span className="text-white text-sm">hello@tradersnetcafe.com</span>
+                    <span className="text-white text-sm">tradersnetcafe@gmail.com</span>
                   </div>
                 </div>
               </div>
