@@ -7,7 +7,7 @@ const ServicesPage: React.FC = () => {
       <section 
         className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden py-24"
         style={{ 
-          backgroundImage: `url('https://res.cloudinary.com/dsamz0zji/image/upload/v1766509091/Untitled_600_x_600_px_4_h6xszb.png')`,
+          backgroundImage: `url('https://res.cloudinary.com/dufnwlqeq/image/upload/v1766690443/Pale_Green_Geometric_Blank_Page_A4_Landscape_nmlkwg.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -128,7 +128,7 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 4: TRADING WORKSHOPS */}
+      {/* SECTION 4: TRADING WORKSHOPS - UPDATED STYLES */}
       <section 
         className="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden py-24"
         style={{ 
@@ -138,12 +138,12 @@ const ServicesPage: React.FC = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
-          <div className="bg-gradient-to-r from-black via-black/95 to-amber-600 rounded-[3.5rem] p-10 md:p-16 border border-white/10 shadow-[0_0_100px_rgba(0,0,0,0.8)] flex flex-col items-center">
-            <h3 className="font-heading text-white mb-6">
+        <div className="relative z-10 max-w-xl mx-auto px-6 text-center">
+          <div className="bg-gradient-to-r from-black via-black/95 to-amber-600 rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-12 border border-white/10 shadow-[0_0_80px_rgba(0,0,0,0.8)] flex flex-col items-center">
+            <h3 className="font-heading text-white mb-6" style={{ fontSize: '20px' }}>
               TRADING WORKSHOPS
             </h3>
-            <p className="font-body text-white">
+            <p className="font-body text-white leading-relaxed" style={{ fontSize: '16px' }}>
               Learn at your pace. From beginner to pro-level — tailored programs on Forex, Crypto, Stocks, and Technical Analysis — with certifications.
             </p>
           </div>
