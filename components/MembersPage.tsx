@@ -205,7 +205,7 @@ const MembersPage: React.FC = () => {
               </div>
               <div className="md:col-span-2 pt-8">
                 <button type="submit" disabled={isSubmitting} className="w-full py-5 rounded-full bg-black text-white font-bold tracking-widest hover:scale-[1.02] active:scale-95 transition-all shadow-2xl uppercase flex items-center justify-center disabled:opacity-50">
-                  {isSubmitting ? 'Sending...' : 'Submit Registration'}
+                  {isSubmitting ? 'Sending...' : 'Submit'}
                 </button>
               </div>
             </form>

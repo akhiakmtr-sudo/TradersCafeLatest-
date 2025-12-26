@@ -86,7 +86,7 @@ const App: React.FC = () => {
                  <img src="https://res.cloudinary.com/dsamz0zji/image/upload/v1766435137/Untitled_design_3_iwdkwo.png" alt="Traders Net Cafe Logo" className="w-full h-auto" />
               </div>
               <p className="font-body text-white/80 max-w-xs leading-relaxed">
-                The premier trading hub for professionals. Practice, observe, and grow in a focused environment designed for serious market participants.
+                A dedicated space to connect as a community, practice with purpose, and evolve as confident traders.
               </p>
             </div>
 
