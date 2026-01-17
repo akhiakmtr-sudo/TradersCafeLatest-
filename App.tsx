@@ -71,7 +71,6 @@ const App: React.FC = () => {
           </>
         )}
         {currentPage === 'about' && <AboutPage />}
-        {currentPage === 'services' && <ServicesPage />}
         {currentPage === 'members' && <MembersPage />}
       </main>
       
@@ -115,7 +114,6 @@ const App: React.FC = () => {
                 <ul className="space-y-3 font-body text-sm">
                   <li><button onClick={() => navigateTo('home')} className="text-white/60 hover:text-amber-500 transition-colors">Home</button></li>
                   <li><button onClick={() => navigateTo('about')} className="text-white/60 hover:text-amber-500 transition-colors">About Us</button></li>
-                  <li><button onClick={() => navigateTo('services')} className="text-white/60 hover:text-amber-500 transition-colors">Services</button></li>
                   <li><button onClick={() => navigateTo('members')} className="text-white/60 hover:text-amber-500 transition-colors">Membership</button></li>
                 </ul>
               </div>
