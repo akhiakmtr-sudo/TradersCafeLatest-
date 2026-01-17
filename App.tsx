@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import VideoSection from './components/VideoSection';
 import AboutPage from './components/AboutPage';
-import ServicesPage from './components/ServicesPage';
 import MembersPage from './components/MembersPage';
 
 const LoadingScreen: React.FC = () => (
