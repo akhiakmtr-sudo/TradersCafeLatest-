@@ -29,7 +29,7 @@ const LoadingScreen: React.FC = () => (
 );
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'services' | 'members'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'members'>('home');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -37,7 +37,6 @@ const App: React.FC = () => {
       setIsLoading(true);
       const hash = window.location.hash;
       if (hash === '#about') setCurrentPage('about');
-      else if (hash === '#services') setCurrentPage('services');
       else if (hash === '#members') setCurrentPage('members');
       else setCurrentPage('home');
       
@@ -49,7 +48,7 @@ const App: React.FC = () => {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  const navigateTo = (page: 'home' | 'about' | 'services' | 'members') => {
+  const navigateTo = (page: 'home' | 'about' | 'members') => {
     setIsLoading(true);
     window.location.hash = page === 'home' ? '' : page;
     setCurrentPage(page);

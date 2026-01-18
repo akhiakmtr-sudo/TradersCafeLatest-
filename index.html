@@ -28,7 +28,6 @@
         .font-script {
             font-family: 'Alex Brush', cursive;
         }
-        /* Mobile adjustment for heading size if needed */
         @media (max-width: 640px) {
             .font-heading {
                 font-size: 28px;
@@ -47,6 +46,9 @@
 </head>
 <body class="bg-black text-white antialiased">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+
+    <!-- ✅ ONLY CHANGE IS HERE -->
+    <script type="module" src="./index.tsx"></script>
+
 </body>
 </html>
